@@ -13,10 +13,13 @@ Izz = 1e-05;
 g = 9.81;
 
 
-omega1 = 0;
-omega2 = 10000;
-omega3 = 0;
-omega4 = 10000;
+omega1 = 10000^2;
+omega2 = 0
+omega3 = 10000^2;
+omega4 = 10000^2;
+
+
+omega = (omega1 + omega2 + omega3 + omega4) / 4;
 
 
 
@@ -24,12 +27,8 @@ omega4 = 10000;
 %Starting simulation
 t_stop=10;
 % sim('Komplet_ny_sim')
-out = sim('Quadcopter_sim1');
+out = sim('Quadcopter_sim1')
 
 
 figure()
 plot3(out.x, out.y, out.z)
-xlabel('x')
-ylabel('y')
-zlabel('z')
-grid
