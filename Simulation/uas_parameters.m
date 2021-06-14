@@ -33,7 +33,7 @@ clc
 %% SIMULATION PARAMETERS
 
 % route = [0 0 1 ; 9 0 1 ; 9 5 1; 7 5 1; 7 7 1; 5 7 1; 5 5 1; 3 5 1];
-route = [0 0 1; 3 0 1];
+route = [0 0 1; 9 0 1];
 wall_color = [0.8 0.2 0.2];
 sample_time = 4e-2;
 publish_rate = 1 * sample_time;
@@ -78,7 +78,8 @@ xlim([-1 10])
 ylim([-1 10])
 
 figure()
-plot(out.t, out.pos_out(:,3))
-title('Step response for pitch (1 m input)')
+hold on
+plot(out.t, out.position(:,1))
+title('Step response for pitch (9 m input)')
 xlabel('Time [s]')
-ylabel('Pitch [rad]')
+ylabel('x-direction [m]')
