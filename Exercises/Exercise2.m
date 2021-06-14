@@ -25,9 +25,9 @@ phiDegree = 0;
 thetaDegree = 0;
 psiDegree = 0; 
 
-xSP = 1;
-ySP = 0;
-zSP = 10;
+%xSP = 1;
+%ySP = 0;
+zSP = 1;
 phiSP = phiDegree*pi/180;
 thetaSP = thetaDegree*pi/180;
 psiSP = psiDegree*pi/180;
@@ -36,8 +36,8 @@ psiSP = psiDegree*pi/180;
 
 %Starting simulation
 t_stop = 10;
-% out = sim('Quadcopter_simLINEARPID');
-out = sim('Quadcopter_simPID');
+out = sim('Quadcopter_simLINEARPID');
+% out = sim('Quadcopter_simPID');
 
 
 
