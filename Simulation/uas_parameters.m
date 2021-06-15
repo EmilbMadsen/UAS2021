@@ -33,7 +33,7 @@ clc
 %% SIMULATION PARAMETERS
 
 % route = [0 0 1 ; 9 0 1 ; 9 5 1; 7 5 1; 7 7 1; 5 7 1; 5 5 1; 3 5 1];
-route = [0 0 1; 9 0 1];
+route = [0 0 1; 0 0 1];
 wall_color = [0.8 0.2 0.2];
 sample_time = 4e-2;
 publish_rate = 1 * sample_time;
@@ -67,19 +67,27 @@ air_density = 1.2041;
 drag_coefficient = 0.47;
 reference_area = pi * 75e-3^2;
 
-
+nytnyt = inv(allocation_matrix);
 %% Plot the data
 
-figure()
-plot(out.position(:,1), out.position(:,2))
-xlabel('x-direction [m]')
-ylabel('y-direction [m]')
-xlim([-1 10])
-ylim([-1 10])
+% figure()
+% plot(out.position(:,1), out.position(:,2))
+% xlabel('x-direction [m]')
+% ylabel('y-direction [m]')
+% xlim([-1 10])
+% ylim([-1 10])
+% 
+% figure()
+% plot(out.t, out.position(:,1))
+% title('Step response for pitch (9 m input)')
+% xlabel('Time [s]')
+% ylabel('x-direction [m]')
+
 
 figure()
-hold on
-plot(out.t, out.position(:,1))
-title('Step response for pitch (9 m input)')
+plot(out.t, out.pitch*180/pi)
+title('Step response for pitch (5 degree input)')
 xlabel('Time [s]')
-ylabel('x-direction [m]')
+ylabel('Pitch [degree]')
+
+
