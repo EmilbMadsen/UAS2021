@@ -110,3 +110,8 @@ route_scaled(:,3) = (route_scaled(:,3) - 1) * z_scale + z_offset;
 % Print the scaled route
 route_scaled
 tEnd=toc(tStart)
+
+
+%% Create route.mat
+
+save('route.mat', 'route','route_scaled')

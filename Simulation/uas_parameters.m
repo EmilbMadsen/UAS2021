@@ -86,7 +86,7 @@ nytnyt = inv(allocation_matrix);
 
 figure()
 plot(out.t, out.pitch*180/pi)
-title('Step response for pitch (5 degree input)')
+title('Step response for pitch (30 degree input)')
 xlabel('Time [s]')
 ylabel('Pitch [degree]')
 
