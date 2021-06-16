@@ -29,7 +29,7 @@ end
 
 % Define the starting and end position
 start = [1,1,1];
-end_ = [3,5,1];
+end_ = [2,5,1];
 %% 
 
 % Make sure the start and end is not an obstacle
@@ -97,7 +97,8 @@ z_scale = 0.75;
 
 x_offset = 0.3;
 y_offset = 0.5;
-z_offset = 0.25;
+z_offset = 1;
+
 
 % Make a copy of the route
 route_scaled = route;
