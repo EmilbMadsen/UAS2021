@@ -25,25 +25,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Initialization
-close all
-clear
-clc
+% close all
+% clear
+% clc
 
 % Trajectory generation
 
 knots = [0 5];
 waypoints = cell(1,2);
 waypoints{1} = [0 ; 0 ; 1];
+% waypoints{2} = [9 ; 0 ; 1];
 waypoints{2} = [9 ; 9 ; 1];
 % Fix this...
 order = 7;
-corridors.times = [1 4];
-corridors.x_lower = [-1 8];
-corridors.x_upper = [1 10];
-corridors.y_lower = [-1 8];
-corridors.y_upper = [1 10];
-corridors.z_lower = [0 0];
-corridors.z_upper = [2 2];
+% corridors.times = [0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5];
+% corridors.x_lower = [0.0 0.0 0.0 0.0 6.0 6.0 6.0 6.0 6.0];
+% corridors.x_upper = [6.1 6.1 6.1 6.1 6.1 6.1 7.6 7.6 9.0];
+% corridors.y_lower = [-0.35 -0.35 -0.35 -0.35 -0.35 -1.0 -1.0 -1.0 -1.0];
+% corridors.y_upper = [0.2 0.2 0.2 0.2 0.2 9.0 9.0 9.0 9.0];
+% corridors.z_lower = [0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0];
+% corridors.z_upper = [2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0];
+
+corridors.times = [0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5];
+corridors.x_lower = [0.0 0.0 0.0 0.0 8.5 8.5 8.5 8.5 8.8];
+corridors.x_upper = [8.5 8.5 8.5 8.5 8.7 8.8 8.9 9.0 9.2];
+corridors.y_lower = [-0.35 -0.35 -0.35 -0.35 -0.35 -1.0 -1.0 -1.0 -1.0];
+corridors.y_upper = [0.2 0.2 0.2 0.2 0.2 9.0 9.0 9.0 9.0];
+corridors.z_lower = [0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0];
+corridors.z_upper = [2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0];
+
 % ...until here
 make_plots = true;
 

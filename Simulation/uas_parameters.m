@@ -30,10 +30,13 @@ clear
 close all
 clc
 
+%% Running trajectory
+% run('uas_trajectory.m')
+
 %% SIMULATION PARAMETERS
 
-% route = [0 0 1 ; 9 0 1 ; 9 5 1; 7 5 1; 7 7 1; 5 7 1; 5 5 1; 3 5 1];
-route = [0 0 1; 0 0 1];
+route = [0 0 1 ; 9 0 1 ; 9 5 1; 7 5 1; 7 7 1; 5 7 1; 5 5 1; 3 5 1];
+% route = [0 0 1; 0 0 1];
 wall_color = [0.8 0.2 0.2];
 sample_time = 4e-2;
 publish_rate = 1 * sample_time;
@@ -77,17 +80,25 @@ nytnyt = inv(allocation_matrix);
 % xlim([-1 10])
 % ylim([-1 10])
 % 
-% figure()
-% plot(out.t, out.position(:,1))
-% title('Step response for pitch (9 m input)')
-% xlabel('Time [s]')
-% ylabel('x-direction [m]')
-
-
 figure()
-plot(out.t, out.pitch*180/pi)
-title('Step response for pitch (30 degree input)')
+subplot(1,2,1)
+plot(out.tout, out.position(:,1))
 xlabel('Time [s]')
-ylabel('Pitch [degree]')
+ylabel('x-direction [m]')
+grid
+subplot(1,2,2)
+plot(out.tout, out.position(:,2))
+xlabel('Time [s]')
+ylabel('y-direction [m]')
+grid
+sgtitle('X and Y direction vs. time')
+
+
+
+% figure()
+% plot(out.t, out.pitch*180/pi)
+% title('Step response for pitch (30 degree input)')
+% xlabel('Time [s]')
+% ylabel('Pitch [degree]')
 
 
