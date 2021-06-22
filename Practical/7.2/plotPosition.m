@@ -73,10 +73,12 @@ plot(out.time(1:501), test(1:501,3))
 grid on
 ylabel('Z-Error (m)')
 xlabel('Time (s)')
-%%
-%PART 2
-%% Creating plots for position
 
+
+
+
+%% PART 2
+% Creating plots for position
 clc; clear all; close all;
 
 load('hover1_2.mat')
