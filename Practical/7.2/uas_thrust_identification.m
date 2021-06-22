@@ -4,13 +4,14 @@ close all
 clear
 clc
 
-load('uas_thrust_data.mat')
+% load('uas_thrust_data.mat')
+load('thrust_data_new.mat')
 
 g = 9.81;
 
 %% Identification
 
-indices = out.pwm.Time > 5 & out.pwm.Time < 40;
+indices = out.pwm.Time > 60 & out.pwm.Time < 100;
 
 %%
 

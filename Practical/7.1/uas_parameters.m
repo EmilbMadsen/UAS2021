@@ -37,7 +37,9 @@ load('uas_poly_traj')
 
 %% SIMULATION PARAMETERS
 load('route.mat')
-%route = [-2 0 1 ; -2 0 1];
+routeEnd = route_scaled(end,:);
+routeEnd(3) = 0;
+routeTotal = ([route_scaled; routeEnd]);
 wall_color = [0.8 0.2 0.2];
 sample_time = 4e-2;
 publish_rate = 1 * sample_time;

@@ -1,16 +1,18 @@
 close all
 clear all
 clc
+%% Generate the wall file
+run('generate_wall.m')
 %% Setup the map
 tStart = tic;
 % Load the map from the wall file. Each line, except the two last, in the
 % wall file is an obstacle. The position of the obstacle is defined in the
 % wall file by its x y z coordinates. The three last elements is
 % the size of the maze, the starting position and goal position
-load('wall.txt')
+load('auto_wall.txt')
 % If a different named file is used, then write it into the wall variable
 % e.g. wall = maze_2;
-wall = wall;
+wall = auto_wall;
 %% 
 
 % Define the map size
@@ -93,11 +95,11 @@ hold off
 %% Scale the route
 x_scale = 0.65;
 y_scale = 0.55;
-z_scale = 0.75;
+z_scale = 0.60;
 
 x_offset = 0.3;
 y_offset = 0.5;
-z_offset = 1;
+z_offset = 0.6;
 
 
 % Make a copy of the route
