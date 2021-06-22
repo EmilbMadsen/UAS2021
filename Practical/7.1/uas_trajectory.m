@@ -28,7 +28,7 @@
 close all
 clear
 clc
-
+%%
 % Trajectory generation
 
 knots = [0 3];
