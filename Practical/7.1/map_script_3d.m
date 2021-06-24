@@ -30,7 +30,7 @@ for i = 1:(length(wall) - 3)
 end
 
 % Define the starting and end position
-start = [1,1,1];
+start = [4,1,1];
 end_ = [2,5,1];
 %% 
 
